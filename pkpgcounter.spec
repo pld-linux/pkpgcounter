@@ -13,10 +13,10 @@ BuildRequires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Pkpgcouter is a generic Page Description Language parser which main
+Pkpgcouter is a generic Page Description Language parser whose main
 feature is to count the number of pages in files ready to be printed.
-It can currently compute the number of pages in several types of files
-:
+It can currently compute the number of pages in several types of
+files:
 - PostScript (both DSC compliant and binary)
 - PDF
 - PCL3/4/5
@@ -40,7 +40,11 @@ formaty:
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install --root $RPM_BUILD_ROOT
+python setup.py install --optimize=2 \
+	--root $RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*/*.py
+rm -rf $RPM_BUILD_ROOT%{_datadir}/doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -50,5 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS README CREDITS BUGS 
 %attr(755,root,root) %{_bindir}/*
 %dir %{py_sitescriptdir}/pdlanalyzer
-%{py_sitescriptdir}/pdlanalyzer/*.py
-%{py_sitescriptdir}/pdlanalyzer/*.pyc
+%{py_sitescriptdir}/pdlanalyzer/*.py[co]

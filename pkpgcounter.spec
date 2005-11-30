@@ -1,12 +1,12 @@
 Summary:	Page counter
 Summary(pl):	Licznik stron
 Name:		pkpgcounter
-Version:	1.50
-Release:	0.1
+Version:	1.72
+Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.librelogiciel.com/software/pkpgcounter/tarballs/%{name}-%{version}.tar.gz
-# Source0-md5:	94d70c07b82ca2f1374da135ba803bb5
+# Source0-md5:	13636ef28df84ee33a946e3c585b496d
 URL:		http://www.librelogiciel.com/software/pkpgcounter
 BuildRequires:	python
 %pyrequires_eq	python
@@ -53,5 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS README CREDITS BUGS 
 %attr(755,root,root) %{_bindir}/*
-%dir %{py_sitescriptdir}/pdlanalyzer
-%{py_sitescriptdir}/pdlanalyzer/*.py[co]
+%dir %{py_sitescriptdir}/pkpgpdls
+%{py_sitescriptdir}/pkpgpdls/*.py[co]
+%{_mandir}/man1/*

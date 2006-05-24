@@ -1,14 +1,15 @@
 Summary:	Page counter
 Summary(pl):	Licznik stron
 Name:		pkpgcounter
-Version:	1.72
-Release:	1
+Version:	1.81
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.librelogiciel.com/software/pkpgcounter/tarballs/%{name}-%{version}.tar.gz
-# Source0-md5:	13636ef28df84ee33a946e3c585b496d
+# Source0-md5:	8af34c6fa843bee198f97658f97279ed
 URL:		http://www.librelogiciel.com/software/pkpgcounter
-BuildRequires:	python
+BuildRequires:	python 
+BuildRequires:	python-devel
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,8 +25,8 @@ files:
 - ESC/P2
 
 %description -l pl
-Pkpgcouter jest ogólnym analizatorem jêzyków opisu stron (PCL,
-PostScript, Esc/P2), którego g³ownym zadaniem jest zliczyæ liczbê
+Pkpgcouter jest ogólnym programem do analizowania jêzyków opisu stron (PCL,
+PostScript, Esc/P2), którego g³ównym zadaniem jest zliczyæ liczbê
 stron w plikach gotowych do wydruku. Obecnie obs³uguje nastêpuj±ce
 formaty:
 - PostScript (zgodny z DSC oraz binarny)

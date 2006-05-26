@@ -25,10 +25,10 @@ files:
 - ESC/P2
 
 %description -l pl
-Pkpgcouter jest ogólnym programem do analizowania jêzyków opisu stron (PCL,
-PostScript, Esc/P2), którego g³ównym zadaniem jest zliczyæ liczbê
-stron w plikach gotowych do wydruku. Obecnie obs³uguje nastêpuj±ce
-formaty:
+Pkpgcouter jest ogólnym programem do analizowania jêzyków opisu stron
+(PCL, PostScript, Esc/P2), którego g³ównym zadaniem jest zliczyæ
+liczbê stron w plikach gotowych do wydruku. Obecnie obs³uguje
+nastêpuj±ce formaty:
 - PostScript (zgodny z DSC oraz binarny)
 - PDF
 - PCL3/4/5
@@ -41,7 +41,8 @@ formaty:
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install --optimize=2 \
+python setup.py install \
+	--optimize=2 \
 	--root $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/*/*.py

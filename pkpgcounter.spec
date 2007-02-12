@@ -1,5 +1,5 @@
 Summary:	Page counter
-Summary(pl):	Licznik stron
+Summary(pl.UTF-8):   Licznik stron
 Name:		pkpgcounter
 Version:	1.81
 Release:	2
@@ -24,11 +24,11 @@ files:
 - PCLXL (aka PCL6)
 - ESC/P2
 
-%description -l pl
-Pkpgcouter jest ogólnym programem do analizowania jêzyków opisu stron
-(PCL, PostScript, Esc/P2), którego g³ównym zadaniem jest zliczyæ
-liczbê stron w plikach gotowych do wydruku. Obecnie obs³uguje
-nastêpuj±ce formaty:
+%description -l pl.UTF-8
+Pkpgcouter jest ogÃ³lnym programem do analizowania jÄ™zykÃ³w opisu stron
+(PCL, PostScript, Esc/P2), ktÃ³rego gÅ‚Ã³wnym zadaniem jest zliczyÄ‡
+liczbÄ™ stron w plikach gotowych do wydruku. Obecnie obsÅ‚uguje
+nastÄ™pujÄ…ce formaty:
 - PostScript (zgodny z DSC oraz binarny)
 - PDF
 - PCL3/4/5

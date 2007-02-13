@@ -1,5 +1,5 @@
 Summary:	Page counter
-Summary(pl.UTF-8):   Licznik stron
+Summary(pl.UTF-8):	Licznik stron
 Name:		pkpgcounter
 Version:	1.81
 Release:	2
